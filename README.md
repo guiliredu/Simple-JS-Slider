@@ -37,4 +37,5 @@ var slider = new simpleSlider({
 ###Credits
 
 +Images from: [http://www.gratisography.com/](http://www.gratisography.com/)
+
 +Animations from: [animate.css](http://daneden.github.io/animate.css/)
