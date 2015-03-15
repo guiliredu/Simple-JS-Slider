@@ -8,6 +8,7 @@
 		// Override properties
 		if(config.wrapElement){ this.wrapElement = config.wrapElement; }
 		if(config.slideElement){ this.slideElement = config.slideElement; }
+		if(config.slideDelay){ this.slideDelay = config.slideDelay; }
 		this.totalElements = document.getElementsByClassName(this.slideElement).length;
 
 		// Add classes to the slides
@@ -15,6 +16,9 @@
 
 		for (var i = 0; i < slides.length; i++) {
 		    slides[i].className = slides[i].className+' slide-'+(i+1);
+		    if(i > 0){
+		    	slides[i].style.display = 'none';
+		    }
 		}
 
 	}
@@ -28,25 +32,31 @@
 
 	simpleSlider.prototype.slideInit = function(){
 		clearInterval(this.slideInterval);
+		var self = this
 
-		this.slideInterval = window.setInterval(this.slidePlus(this), this.slideDelay);
+		this.slideInterval = window.setInterval(function(){
+			
+			self.slide++;
+
+			if(self.slide <= self.totalElements){
+				self.slideChange(self.slide);
+			}else{
+				self.slide = 1;
+				self.slideChange(self.slide);
+			}
+			// console.log('SLIDE: '+self.slide+' - TOTAL: '+self.totalElements);
+
+		}, this.slideDelay);
 	}
 
 	simpleSlider.prototype.slideChange = function(newSlide){
-		document.getElementsByClassName(this.slideElement)[0].style.display = 'none';
-		document.getElementsByClassName('slide-'+newSlide)[0].style.display = 'block';
-	}
+		var slides = document.getElementsByClassName(this.slideElement);
 
-	simpleSlider.prototype.slidePlus = function(slider){
-		slider.slide++;
-		console.log(slider.slide);
-
-		if(slider.slide <= slider.totalElements){
-			slider.slideChange(slider.slide);
-		}else{
-			slider.slide = 1;
-			slider.slideChange(slider.slide);
+		for (var i = 0; i < slides.length; i++) {
+		    slides[i].style.display = 'none';
 		}
+
+		document.getElementsByClassName('slide-'+newSlide)[0].style.display = 'block';
 	}
 
 
