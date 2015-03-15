@@ -41,7 +41,9 @@
 	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
 	<script src="../src/simple-slider.js"></script>
 	<script>
-		var slider = new simpleSlider({ wrapElement: '#slider' });
+		$(document).ready(function(){
+			var slider = new simpleSlider({ wrapElement: 'slider', slideElement: 'slide'});
+		});
 	</script>
 </body>
 </html>
