@@ -19,9 +19,9 @@
 	<div id="slider-wrap">
 		<div class="inner">
 			<div id="slider">
-				<div class="slide" style="background-image:url('assets/img/slide-1.jpg');"></div>
-				<div class="slide" style="background-image:url('assets/img/slide-2.jpg');"></div>
-				<div class="slide" style="background-image:url('assets/img/slide-3.jpg');"></div>
+				<div class="slide fadeInUp animated" style="background-image:url('assets/img/slide-1.jpg');"></div>
+				<div class="slide fadeInUp animated" style="background-image:url('assets/img/slide-2.jpg');"></div>
+				<div class="slide fadeInUp animated" style="background-image:url('assets/img/slide-3.jpg');"></div>
 			</div>
 		</div>
 	</div>
@@ -32,7 +32,9 @@
 			<span id="logo">Simple JS Slider</span>
 
 			<ul>
+				<li class="title">Simple JS Slider uses:</li>
 				<li>Images from: <a href="http://www.gratisography.com/" target="_blank">http://www.gratisography.com/</a></li>
+				<li><a href="http://daneden.github.io/animate.css/" target="_blank">animate.css</a></li>
 			</ul>
 		</div>
 	</footer>
@@ -43,6 +45,8 @@
 	<script>
 		$(document).ready(function(){
 			var slider = new simpleSlider({ wrapElement: 'slider', slideElement: 'slide'});
+
+			slider.slideInit();
 		});
 	</script>
 </body>

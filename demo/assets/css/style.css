@@ -31,4 +31,5 @@ footer { float:left; width:100%; background-color:#C7CEDA;}
 footer #logo { float:left; font-size:30px; color:#FFF; font-family: 'Oswald', Arial, sans-serif;}
 footer ul { float:left; margin-left:40px; width:400px; list-style:none;}
 footer ul li { float:left; width:100%; margin-bottom:10px;}
+footer ul li.title { font-weight:700;}
 footer ul li a:hover { color:#0099CC; }
