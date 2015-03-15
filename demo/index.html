@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<title>Simple JS Slider - Demonstration</title>
+
+	<link href='http://fonts.googleapis.com/css?family=Oswald:400,300' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="stylesheet" href="assets/css/animate.css">
+</head>
+<body>
+	<header>
+		<div class="inner">
+			<span id="logo">Simple JS Slider</span>
+		</div>
+	</header>
+
+	<div id="slider-wrap">
+		<div class="inner">
+			<div id="slider">
+				<div class="slide" style="background-image:url('assets/img/slide-1.jpg');"></div>
+				<div class="slide" style="background-image:url('assets/img/slide-2.jpg');"></div>
+				<div class="slide" style="background-image:url('assets/img/slide-3.jpg');"></div>
+			</div>
+		</div>
+	</div>
+
+	<footer>
+		<div class="inner">
+
+			<span id="logo">Simple JS Slider</span>
+
+			<ul>
+				<li>Images from: <a href="http://www.gratisography.com/" target="_blank">http://www.gratisography.com/</a></li>
+			</ul>
+		</div>
+	</footer>
+	
+
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="../src/simple-slider.js"></script>
+	<script>
+		var slider = new simpleSlider({ wrapElement: '#slider' });
+	</script>
+</body>
+</html>
