@@ -29,4 +29,12 @@ var slider = new simpleSlider({
 });
 ```
 
-I will add more funcionalities in the furute
+###Todos
+
++ prev and next buttons
++ bullets with the number of slides
+
+###Credits
+
+Images from: [http://www.gratisography.com/](http://www.gratisography.com/)
+Animations from: [animate.css](http://daneden.github.io/animate.css/)
