@@ -11,7 +11,7 @@ instance the object and call the `slideInit()` method
 var slider = new simpleSlider();
 slider.slideInit();
 ```
-it will assume that you are using an estruture like this:
+it will assume that you are using an structure like this:
 
 ```html
 <div id="slider">
@@ -36,6 +36,5 @@ var slider = new simpleSlider({
 
 ###Credits
 
-+Images from: [http://www.gratisography.com/](http://www.gratisography.com/)
-
-+Animations from: [animate.css](http://daneden.github.io/animate.css/)
++ Images from: [http://www.gratisography.com/](http://www.gratisography.com/)
++ Animations from: [animate.css](http://daneden.github.io/animate.css/)
