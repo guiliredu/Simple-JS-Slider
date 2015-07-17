@@ -15,7 +15,7 @@
 		var slides = document.getElementsByClassName(this.slideElement);
 
 		for (var i = 0; i < slides.length; i++) {
-		    slides[i].className = slides[i].className+' slide-'+(i+1);
+		    slides[i].className = slides[i].className+' '+this.slideElement+'-'+(i+1);
 		    if(i > 0){
 		    	slides[i].style.display = 'none';
 		    }
@@ -56,7 +56,7 @@
 		    slides[i].style.display = 'none';
 		}
 
-		document.getElementsByClassName('slide-'+newSlide)[0].style.display = 'block';
+		document.getElementsByClassName(this.slideElement+'-'+newSlide)[0].style.display = 'block';
 	}
 
 
