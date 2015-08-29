@@ -15,7 +15,7 @@ it will assume that you are using an html structure like this:
 
 ```html
 <div id="js-slider">
-	<div class="js-slide fadeInUp animated" style="background-image:url('assets/img/slide-1.jpg');"></div>
+	<div class="js-slide"></div>
 <div>
 ```
 and a CSS stylesheet like this:
