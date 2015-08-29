@@ -33,13 +33,10 @@ var slider = new simpleSlider({
 	slideElement: 'js-slide', //the class of each slide
 	navPrevElement: 'js-slide-nav-prev', //the class of the previous button
 	navNextElement: 'js-slide-nav-next', //the class of the next button
+	bulletsElement: 'js-slide-bullets', //the class of the bullets holder
 	slideDelay: 4000 //delay between each slide
 });
 ```
-
-###To-dos
-
-+ bullets with the number of slides
 
 ###Credits
 
