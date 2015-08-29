@@ -18,10 +18,13 @@
 
 	<div id="slider-wrap">
 		<div class="inner">
-			<div id="slider">
-				<div class="slide fadeInUp animated" style="background-image:url('assets/img/slide-1.jpg');"></div>
-				<div class="slide fadeInUp animated" style="display:none; background-image:url('assets/img/slide-2.jpg');"></div>
-				<div class="slide fadeInUp animated" style="display:none; background-image:url('assets/img/slide-3.jpg');"></div>
+			<div class="slider" id="js-slider">
+				<div class="slide js-slide fadeInUp animated" style="background-image:url('assets/img/slide-1.jpg');"></div>
+				<div class="slide js-slide fadeInUp animated" style="display:none; background-image:url('assets/img/slide-2.jpg');"></div>
+				<div class="slide js-slide fadeInUp animated" style="display:none; background-image:url('assets/img/slide-3.jpg');"></div>
+
+				<span class="btn-nav-right js-slide-nav-next"></span>
+				<span class="btn-nav-left js-slide-nav-prev"></span>
 			</div>
 		</div>
 	</div>
@@ -44,7 +47,7 @@
 	<script src="../src/simple-slider.js"></script>
 	<script>
 		$(document).ready(function(){
-			var slider = new simpleSlider({ wrapElement: 'slider', slideElement: 'slide', slideDelay: 4000});
+			var slider = new simpleSlider({ wrapElement: 'js-slider', slideElement: 'js-slide', slideDelay: 4000});
 
 			slider.slideInit();
 		});
