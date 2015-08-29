@@ -29,15 +29,16 @@ You can add parameters to the constructor:
 
 ```javascript
 var slider = new simpleSlider({ 
-	wrapElement: 'slider', //the id of the wrapper
-	slideElement: 'slide', //the class of each slide
+	wrapElement: 'js-slider', //the id of the wrapper
+	slideElement: 'js-slide', //the class of each slide
+	navPrevElement: 'js-slide-nav-prev', //the class of the previous button
+	navNextElement: 'js-slide-nav-next', //the class of the next button
 	slideDelay: 4000 //delay between each slide
 });
 ```
 
 ###To-dos
 
-+ prev and next buttons
 + bullets with the number of slides
 
 ###Credits
