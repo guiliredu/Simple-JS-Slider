@@ -87,7 +87,7 @@
 			    	self.slideChange(item);
 			    });
 			}
-			
+			bullets[0].className = 'bullet active';
 		}
 	}
 
@@ -115,15 +115,22 @@
 
 	simpleSlider.prototype.slideChange = function(newSlide){
 		var slides = document.getElementsByClassName(this.slideElement);
-		var bullets = document.getElementsByClassName(this.bulletsElement)[0].childNodes;
 
 		for (var i = 0; i < slides.length; i++) {
 		    slides[i].style.display = 'none';
-		    bullets[i].className = 'bullet';
+		}
+		document.getElementsByClassName(this.slideElement+'-'+newSlide)[0].style.display = 'block';
+
+
+		if(document.getElementsByClassName(this.bulletsElement).length > 0){
+			var bullets = document.getElementsByClassName(this.bulletsElement)[0].childNodes;
+			for (var i = 0; i < slides.length; i++) {
+			    bullets[i].className = 'bullet';
+			}
+			bullets[newSlide-1].className = 'bullet active';
 		}
 
-		document.getElementsByClassName(this.slideElement+'-'+newSlide)[0].style.display = 'block';
-		bullets[newSlide-1].className = 'bullet active';
+		
 	}
 
 
