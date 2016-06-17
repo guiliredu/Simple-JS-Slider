@@ -4,6 +4,7 @@ var browserSync = require('browser-sync').create();
 
 gulp.task('watch', ['browserSync', 'js:uglify'], function(){
   gulp.watch('src/*.js', ['js:uglify']); 
+  gulp.watch('app/*.html', browserSync.reload);
 });
 
 gulp.task('js:uglify', function(){
@@ -19,4 +20,4 @@ gulp.task('browserSync', function() {
       baseDir: 'demo'
     },
   })
-})
+});
